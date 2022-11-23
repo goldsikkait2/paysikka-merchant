@@ -1,0 +1,319 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ .img{
+    width: 25%;
+    height: 8rem;
+    position: absolute;
+    top: 17rem;
+    left: 6%;
+}
+// .banner{
+//     background-image: url(../../../assets/image/d1.png);
+// }
+.ban-wrapper{
+    width: 140%;
+    margin-left: -18rem;
+    margin-top: -2rem;
+    height: 103vh;
+}
+.box1{
+    width: 50%;
+    height: 100vh;
+    border: 1px solid #4152a5;
+    background: #4152a5;
+}
+.box{
+    width: 424px;
+    height: 195px;
+    background: #fff;
+    box-shadow: 0 10px 15px rgb(179 179 179 / 70%);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 12px 34px;
+    position: absolute;
+    top: 16rem;
+    // left: 18rem;
+}
+.box h2{
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #4152a5;
+}
+.box .para1{
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #155724;
+    text-align: center;
+}
+.box .para2{
+    font-size: 14px;
+    text-transform: capitalize;
+    color: red;
+    text-align: center;
+}
+.container{
+    width: 333px;
+    height: 295px;
+    background: #fff;
+    box-shadow: 0 10px 15px rgb(179 179 179 / 70%);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem;
+    position: absolute;
+    top: 12rem;
+    left: 36%;
+}
+.head{
+    text-align: center;
+    color: #4152a5;
+    text-transform: uppercase;
+}
+.login{
+    text-transform: capitalize;
+    color: black;
+    font-size: 21px;
+    padding: 10px 2px;
+}
+.rounded{
+    position: absolute;
+    top: 25%;
+    left: 65%;
+    width: 30%;
+}
+.container h2 i{
+    font-size: 1.8rem;
+    padding-left: 0.1rem;
+}
+.intro-text p{
+    font-size: 1.8rem;
+    padding-top: 0.3rem;
+}
+
+.input{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 0.7rem;
+}
+
+.input input{
+    width: 100%;
+    height: 50px;
+    padding-top: 1.1rem;
+    padding-left: 9px;
+    outline: none;
+    border: 1px solid #8c8c8c;
+    border-radius: 3px;
+    transition: 0.2s;
+}
+
+.input label{
+    position: absolute;
+    top: 30%;
+    left: 10px;
+    font-size: 1.1rem;
+    color: #8c8c8c;
+    transition: 0.2s;
+}
+
+.input input:focus ~ label, .input input:valid ~ label{
+    top: 10%;
+    font-size: 0.8rem;
+    color: #000;
+} 
+
+.input input:focus{
+    border-width: 2px;
+    border-color: #0A66C3;
+}
+
+.button{
+    height: 34px;
+    background: #0A66C3 !important;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bolder;
+    width: 100%;
+}
+::ng-deep   .btn{
+    background: #0A66C3 !important;
+}
+@media only screen and (max-width: 767px){
+    .img {
+        width: 24%;
+        height: 2rem;
+        left: 15%;
+        margin-left: -48px;
+        margin-top: 12px;
+    }
+    .container{
+        width: 136px;
+        height: 283px;
+        background: #fff;
+        box-shadow: 0 10px 15px rgb(179 179 179 / 70%);
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 1rem;
+        position: absolute;
+        top: 9rem;
+        left: 27%;
+    }
+    .otp-input{
+        width: 30px;
+        font-size: 1px !important;
+        height: 30px;
+    }
+    .box{
+        width: 158px;
+    height: 261px;
+    background: #fff;
+    box-shadow: 0 10px 15px rgb(179 179 179 / 70%);
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5px 13px;
+    position: absolute;
+    top: 11rem;
+    }
+    .box h2 {
+        font-size: 15px;
+        text-transform: capitalize;
+        color: #4152a5;
+    }
+    .ban-wrapper {
+        width: 375px;
+        margin-left: 0rem;
+        margin-top: 0rem;
+        height: 100vh;
+            
+    }
+    .head {
+        text-align: center;
+        color: #4152a5;
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+    .login {
+        text-transform: capitalize;
+        color: black;
+        font-size: 13px;
+        padding: 10px 2px;
+    }
+    .input input {
+        width: 100%;
+        height: 42px;
+        padding-top: 1.1rem;
+        padding-left: 9px;
+        outline: none;
+        border: 1px solid #8c8c8c;
+        border-radius: 3px;
+        transition: 0.2s;
+        /* padding: 13px 20px; */
+    }
+    button {
+        height: 32px;
+        background: #0A66C3;
+        outline: none;
+        border: none;
+        border-radius: 30px;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: bolder;
+    }
+    .rounded{
+        position: absolute;
+    top: 38%;
+    width: 36%;
+    left: 64%;
+    height: 35%;
+    }
+    
+}
+@media only screen and (min-width: 1440px){
+    .img {
+        width: 29%;
+        height: 8rem;
+        left: 4% !important;
+        position: absolute;
+        top: 18rem;
+    }
+    .container {
+        width: 440px;
+        height: 329px;
+        background: #fff;
+        box-shadow: 0 10px 15px rgb(179 179 179 / 70%);
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 1rem;
+        position: absolute;
+        top: 13rem;
+        // left: 29rem;
+    }
+    .ban-wrapper {
+        width: 100%;
+        margin-left: 0rem;
+        margin-top: 0rem;
+        height: 100vh;
+    }
+    .box {
+        width: 424px;
+        height: 195px;
+        background: #fff;
+        box-shadow: 0 10px 15px rgb(179 179 179 / 70%);
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 12px 34px;
+        position: absolute;
+        top: 19rem;
+        // left: 33rem;
+    }
+    .rounded{
+        position: absolute;
+    top: 23%;
+    left: 66%;
+    width: 31%;
+    }
+    
+}
+// @media only screen and (max-width: 767px){
+//     .ban-wrapper {
+//         width: 100%;
+//         margin-left: 0rem;
+//         margin-top: 0rem;
+//         height: 100vh;
+//     }
+//     .button {
+//         height: 34px;
+//         background: #0A66C3 !important;
+//         outline: none;
+//         border: none;
+//         border-radius: 30px;
+//         color: #fff;
+//         font-size: 1rem;
+//         font-weight: bolder;
+//         width: 100%;
+//     }
+//     img {
+//         width: 35%;
+//         height: 8rem;
+//         left: 33% !important;
+//         position: absolute;
+//         top: 7rem;
+//    

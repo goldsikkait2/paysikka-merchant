@@ -1,0 +1,52 @@
+<div class="banner">
+    <div class="box1">
+        <img src="../../../assets/image/menu1.png" class="img"  alt="">
+    </div>
+    <!-- <img src="../../../assets/image/logbg.png" class="img-fluid" alt="responsive image" style="height: 100vh;"> -->
+    <!-- <img src="../../../assets/image/paysikka.png" class="img" alt=""> -->
+    <div class="d-flex justify-content-center">
+        <div class="container" *ngIf="!showOtpScreen">
+    
+            <div class="intro-text">
+                <p class="head" style="text-align: left!important; text-transform: capitalize;">Login</p>
+            </div>
+            <form role="form" class="form w-100" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <h2 class="login">Enter Your Mobile Number</h2>
+            
+            <div class="inputs">
+                <div class="input">
+                    <input type="text" class="form-control" (keypress)="numberOnly($event)" formControlName="contact" pattern="[0-9]*" maxlength="10"/>
+                    
+                    <label for="contact">
+                         Number
+                    </label>
+                </div>
+            </div>
+            <button class=" button btn btn-primary btn-lg btn-block" type="submit">Login</button>
+        </form>
+        </div>
+    </div>
+    <div >
+        <img *ngIf="!showOtpScreen" src="../../../assets/image/login.gif" class="rounded float-right" alt="...">
+        <img   *ngIf="showOtpScreen" src="../../../assets/image/otp.gif" class="rounded float-right" alt="...">
+    </div>
+ 
+  <!-- <img src="../../../assets/image/login-right.gif" class="rounded float-right" alt="..."> -->
+  
+    
+<div>
+    <div class="d-flex justify-content-center">
+        <div class="box" *ngIf="showOtpScreen">
+            <h2 style="text-align: center;">enter one time password(OTP)</h2>
+            <small class="para1">  OTP is sent to Your Mobile Number<b> *{{lastDigit}} </b></small>
+            <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="{length:6}"></ng-otp-input>
+
+            <countdown [config]="{leftTime: timeData, format: 'm:s'}" (event)="handleEvent($event)" style="color: rgb(228, 32, 32); text-align:right"></countdown>
+            
+        </div>
+    </div>
+    <div >
+        
+    </div>
+</div>
+</div>

@@ -1,0 +1,83 @@
+
+.sticky-top{
+    z-index: 999 !important;
+  
+  
+  }
+  .top-nav{
+    z-index: 999;
+  }
+  
+  .navbar {
+      padding: 16px 16px;
+      background-color: rgb(225, 228, 231) !important;
+      z-index: 999 !important;
+     button {
+      border: none;
+    &:focus {
+    box-shadow: none;
+    }
+        .icon-vertical{
+        color: white;
+        background-color: #4152a5;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        font-size: 16px;
+        color: white;
+        padding: 10px 9px;
+       } 
+    }
+      .text-dash{
+        font-size: 19px;
+        text-decoration: none;
+        color: black;
+    }
+     .user-icon{
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        color: #4152a5;
+        margin: 10px 0px;
+        left: 7rem;
+        position: relative;
+        
+       }
+    }
+    .row {
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 0;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: calc(-1 * var(--bs-gutter-y));
+      margin-right: calc(-.5 * var(--bs-gutter-x));
+      margin-left: calc(-.5 * var(--bs-gutter-x));
+      cursor: pointer;
+  }
+  .badge {
+    position: fixed;
+    top: 13px;
+    padding: 5px 6px;
+    border-radius: 50%;
+    background: #ef2b2b;
+    color: #fff;
+    margin-left: 18px;
+    font-size: small;
+    font-variant: all-petite-caps;
+  }
+  @media only screen and (max-width: 767px){
+    .top-nav{
+      .row[_ngcontent-nss-c93] {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: calc(-1 * var(--bs-gutter-y));
+        margin-right: 70px;
+        margin-left: 0px;
+        cursor: pointer;
+    }
+    }
+  }
+  
+  

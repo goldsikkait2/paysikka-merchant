@@ -1,0 +1,159 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <div class="form_wrapper" *ngIf="!otp" >
+  
+    <div class="col-lg-12 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12 edit_information">
+      <!-- enctype="multipart/form-data" method="post" -->
+      <form action="" class="form-2"  [formGroup]="registerForm" (ngSubmit)="onSubmit();"  >
+     
+        <h2 class="text-center-1 py-2 text-theme"> Outlet Registration</h2>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="form-group">
+              <label class="profile_details_text py-2" >Merchant Name:</label>
+              <input type="text" class="form-control" [(ngModel)]="oname" formControlName="merchantname" placeholder="Merchant Name"  >
+              <!-- <div *ngIf="submitted && formControl['merchantname'].errors" class="invalid-feedback">
+                <div *ngIf="formControl['merchantname'].errors['required']">Fullname is required</div>
+              </div> -->
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="form-group">
+              <label class="profile_details_text py-2">Merchant Email: </label>
+              <input type="text" class="form-control" [(ngModel)]="oemail" formControlName="merchantemail" placeholder="Merchant Email" 
+               >
+              <!-- <div *ngIf="submitted && formControl['merchantemail'].errors" class="invalid-feedback">
+                <div *ngIf="formControl['merchantemail'].errors['required']">Email is required</div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <label class="profile_details_text py-2">Merchant Number:</label>
+              <input type="text"  class="form-control"  [(ngModel)]="contact"  formControlName="merchantnumber" placeholder="Mobile Number"  >
+              <!-- <div *ngIf="submitted && formControl['merchantnumber'].errors" class="invalid-feedback">
+                <div *ngIf="formControl['merchantnumber'].errors['required']">Mobile number is required</div>
+                <div class="mt-1 ms-1" *ngIf="formControl['merchantnumber'].errors['minlength']">Mobile Number is invalid</div>
+                <div class="mt-1 ms-1" *ngIf="formControl['merchantnumber'].errors['maxlength']">Mobile Number is invalid</div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <label class="profile_details_text py-2">Bussines Name:</label>
+              <input type="text" class="form-control" [(ngModel)]="bname"   formControlName="businessname" placeholder="Enter Bussiness Name"   >
+              <!-- <div *ngIf="submitted && formControl['businessname'].errors" class="invalid-feedback">
+                <div *ngIf="formControl['businessname'].errors['required']">Business Name is required</div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <label class="profile_details_text py-2">Merchant Pan:</label>
+              <input type="text" class="form-control" [(ngModel)]="pnumber"  formControlName="merchantpan" placeholder="Enter Pan Number"  >
+              <!-- <div *ngIf="submitted && formControl['merchantpan'].errors" class="invalid-feedback">
+                <div *ngIf="formControl['merchantpan'].errors['required']">Pan Number is required</div>
+                <div *ngIf="formControl['merchantpan'].errors['minlength']">Invalid Pan Number</div>
+                <div *ngIf="formControl['merchantpan'].errors['maxlength']">Invalid Pan Number</div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <label class="profile_details_text py-2">Merchant Aadhar:</label>
+              <input type="text" class="form-control"  [(ngModel)]="anumber" formControlName="merchantaadhar" placeholder="Enter Aadhar Number"  >
+              <!-- <div *ngIf="submitted && formControl['merchantaadhar'].errors" class="invalid-feedback">
+                <div *ngIf="formControl['merchantaadhar'].errors['required']">Aadhar Number is required</div>
+                <div *ngIf="formControl['merchantaadhar'].errors['minlength']">invalid Aadhar Number</div>
+                <div *ngIf="formControl['merchantaadhar'].errors['maxlength']">invalid Aadhar Number</div>
+  
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="form-group">
+              <label class="profile_details_text py-2">Merchant whats app Number:</label>
+              <input type="text" class="form-control" [(ngModel)]="wcontact"  formControlName="merchantwhatsappnumber" placeholder="Enter whats app Number"  >
+              <!-- <div *ngIf="submitted && formControl['merchantwhatsappnumber'].errors" class="invalid-feedback">
+                <div *ngIf="formControl['merchantwhatsappnumber'].errors['required']">Whats app Number is required</div>
+                <div *ngIf="formControl['merchantwhatsappnumber'].errors['minlength']">Invalid Whats app Number </div>
+                <div *ngIf="formControl['merchantwhatsappnumber'].errors['maxlength']">Invalid Whats app Number</div>
+  
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="form-group">
+              <label class="profile_details_text py-2">GST Number:</label>
+              <input type="text" class="form-control" [(ngModel)]="gstnum"  formControlName="gstnumber" placeholder="Enter GST Number"   >
+              <!-- <div *ngIf="submitted && formControl['gstnumber'].errors" class="invalid-feedback">
+                <div *ngIf="formControl['gstnumber'].errors['required']">GST Number is required</div>
+              </div> -->
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="form-group">
+              <label class="profile_details_text py-2">Pin Code: </label>
+              <input type="text" class="form-control" [(ngModel)]="pin"   formControlName="pincode"  placeholder="Enter PIN Code"  >
+              <!-- <div *ngIf="submitted && formControl['pincode'].errors" class="invalid-feedback">
+                <div *ngIf="formControl['pincode'].errors['required']">Pin Code is required</div>
+                <div *ngIf="formControl['pincode'].errors['minlength']">Invalid Pin Code</div>
+                <div *ngIf="formControl['pincode'].errors['maxlength']">Invalid pin code</div>
+                <div *ngIf="formControl['pincode'].errors['pattern']">*Numbers only Valid</div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="form-group">
+              <label class="profile_details_text py-2">Address</label>
+              <input type="text" name="Business" class="form-control"  [(ngModel)]="loc"  formControlName="address"  placeholder="Address" >
+              <!-- <div *ngIf="submitted && formControl['address'].errors" class="invalid-feedback">
+                <div *ngIf="formControl['address'].errors['required']">Address is required</div>
+              </div> -->
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="form-group">
+              <label class="profile_details_text py-2">State</label>
+              <input type="text" class="form-control"  [(ngModel)]="state"  formControlName="state"  placeholder="State" >
+              <!-- <div *ngIf="submitted && formControl['address'].errors" class="invalid-feedback">
+                <div *ngIf="formControl['address'].errors['required']">Address is required</div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 submit">
+            <div class="form-group">
+              <button type="button mt-5" class="btn btn-primary">Submit</button>
+              
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  
+  <div class="box" *ngIf="otp">
+    <h2>enter one time password(OTP)</h2>
+    <p class="para1" style="color:rgb(221, 84, 50);">Note: OTP sent to Aadhar link mobile</p>
+    <ng-otp-input class="m-2 text-center form-control rounded" id="first" (onInputChange)="onOtpChange($event)" [config]="{length:6}" class="otpInput">
+    </ng-otp-input>
+    
+  </div>

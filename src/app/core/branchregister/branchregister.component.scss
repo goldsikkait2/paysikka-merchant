@@ -1,0 +1,203 @@
+::ng-deep .otpInput{
+    margin: 0px auto;
+    display: flex;
+    justify-content: center !important;
+    input{
+      color: #4152a5;
+      border: 2px solid #4152a5 !important;
+    }
+  }
+  
+  
+  .opacityPic{
+    display: none;
+  }
+  .picBg{
+    background:none !important;
+  }
+  
+  
+  .form_wrapper{
+      width: 90%;
+      max-width: 100%;
+      box-sizing: border-box;
+      background-color: #fff;
+      position: relative;
+      z-index: -1;
+      margin: 8% auto 0 !important;
+      top: 34px;
+      /* bottom: 19px; */
+      padding: 5px 15px !important;
+      margin-bottom: 6rem !important;
+      height: 56rem;
+      // border-bottom: 5px solid #4152a5;
+      // box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+      transform-origin: 50% 0%;
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+    .profile-pic-wrapper {
+      height: 33vh;
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .pic-holder {
+      text-align: center;
+      position: relative;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      top: 25px;
+    }
+   
+    .pic-holder .upload-file-block,
+    .pic-holder .upload-loader {
+      position: absolute;
+      top: -20px;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(90, 92, 105, 0.7);
+      color: #f8f9fc;
+      font-size: 12px;
+      font-weight: 600;
+      // opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    .pic-holder .upload-file-block {
+      cursor: pointer;
+    }
+    label{
+      margin-top: 20px;
+    }
+    .form-control{
+      padding: 10px 10px;
+    }
+  
+   
+    /* Snackbar css */
+    .snackbar {
+      visibility: hidden;
+      min-width: 250px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 2px;
+      padding: 16px;
+      position: fixed;
+      z-index: 1;
+      left: 50%;
+      bottom: 30px;
+      font-size: 14px;
+      transform: translateX(-50%);
+    }
+    .snackbar.show {
+      visibility: visible;
+      -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+      animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+    @-webkit-keyframes fadein {
+      from {
+        bottom: 0;
+        opacity: 0;
+      }
+      to {
+        bottom: 30px;
+        opacity: 1;
+      }
+    }
+    @keyframes fadein {
+      from {
+        bottom: 0;
+        opacity: 0;
+      }
+      to {
+        bottom: 30px;
+        opacity: 1;
+      }
+    }
+   
+    @media only screen and (max-width: 1024px) {
+      .profile-pic-wrapper{
+        height: 22vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    }
+    .form-2{
+      width: 95%;
+      padding: 6px 31px;
+      margin-top: -6rem;
+    
+    }
+    .banner{
+      width: 102%;
+      margin-left: -19px;
+      margin-top: -2rem;
+      height: 8rem;
+    }
+    .submit{
+      margin: 50px 0px !important;
+    }
+    
+
+    //otp
+    .box{
+      width: 479px;
+      height: 254px;
+      background: #fff;
+      box-shadow: 0 10px 15px rgb(179 179 179 / 70%);
+      border-radius: 7px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 8px 32px;
+      /* position: absolute; */
+      /* top: 10rem; */
+      /* left: 26rem; */
+      margin-top: 8rem;
+      margin: auto 34%;
+      /* position: relative; */
+      /* top: 47px; */
+      margin-top: 9rem;
+      margin-bottom: 9rem;
+  }
+  .box h2{
+    font-size: 28px;
+      text-transform: capitalize;
+      color: #4152a5;
+  }
+  .box .para1{
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #155724;
+    text-align: center;
+  }
+  .box .para2{
+    font-size: 20px;
+    text-transform: capitalize;
+    color: red;
+    text-align: center;
+  }
+  .box .otpInput{
+    padding: 11px 31px;
+  }
+   .ng-star-inserted{
+    margin-left: 17rem;
+  }

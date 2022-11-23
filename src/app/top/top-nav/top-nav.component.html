@@ -1,0 +1,76 @@
+
+<div class="top-nav sticky-top">
+    <nav class="navbar navbar-light bg-light">
+      <div class="row w-100">
+        <div class="col-md-8 col-6">
+          <button class="navbar-toggler" type="button" (click)="toggle()">
+            <i class="fa-solid fa-bars icon-vertical" *ngIf="opened"></i>
+            <i class="fa-solid fa-list icon-vertical" *ngIf="!opened"></i>
+          </button>
+          <a  class="text-dash">{{title}}</a>
+        </div>
+        <div class="col-md-1 col-2">
+         
+          <i class="fa-solid fa-bell user-icon">
+            <span _ngcontent-vdo-c50="" class="badge ng-tns-c50-1">10</span>
+          </i>
+          
+        </div>
+        <div class="col-md-1 col-1">
+          <i routerLink="/merchant/profile" class="fa-solid fa-user user-icon"></i>
+        </div>
+        <div class="col-md-1 col-1">
+            <i class="fa-solid fa-power-off user-icon" (click)="logout()" onclick="play('login')"></i> 
+        <audio id="login" src="https://www.winhistory.de/more/winstart/ogg/wfw311.ogg" autostart="false"></audio>
+        </div>
+ 
+      </div>
+    </nav>
+  </div>
+
+
+  <!-- notifications modal -->
+<div [style.display]="notificationsModal ? 'block' : 'none'" class="modal not"
+id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+<div class="modal-dialog modal-dialog-scrollable" role="document">
+<div class="modal-content">
+
+ <div class="modal-header">
+   <h5 class="modal-title" id="myModalLabel">Notifications</h5>
+   <button type="button" class="btn btn-light"
+           data-dismiss="modal" (click)="hideNotificationsModal()">X
+   </button>
+ </div>
+
+ <div class="notification-scroll">
+   <div class="notifications" >
+     <div class="card notification-card" >
+       <!-- <div *ngIf="e.isSeen == true" class="card-body">
+         <b>{{e?.title}}</b><br>
+         {{e?.message}}
+         <p class="text-right">{{e?.created_date}}</p>
+       </div> -->
+       <!-- <div  style="background-color:#edf7fe;" class="card-body">
+         <b>{{e?.title}}</b><br>
+         {{e?.message}}
+         <p class="text-right">{{e?.created_date}}</p>
+       </div> -->
+
+     </div>
+   </div>
+   <div>
+
+   </div>
+
+ </div>
+
+ <!-- <div class="modal-body">
+ </div>  -->
+
+ <!-- <div class="modal-footer">
+ </div> -->
+
+</div>
+</div>
+</div>

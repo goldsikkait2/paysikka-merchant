@@ -1,0 +1,161 @@
+<form action="" [formGroup]="editForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data" method="post">	
+    <!-- <img src="../../../assets/image/Rectangle 1.png" class="banner" alt=""> -->
+    <div class="form_wrapper">
+      <img src="../../../assets/image/Rectangle 1.png" class="banner" alt="">
+      <!-- <div class="profile-pic-wrapper">
+        <div class="pic-holder">
+          <img id="profilePic"    [src]="merchantImage" class="pic" >
+      
+          <input class="uploadProfileInput" alife-file-to-base64   formControlName="profil_pic" type="file"  id="newProfilePhoto" accept="image/*" style="opacity: 0;" (change)="onFileChange($event)"  />
+          <label for="newProfilePhoto" class="upload-file-block">
+            <div class="text-center">
+              <div class="mb-2">
+                <i class="fa fa-camera fa-2x"></i>
+              </div>
+              <div class="text-uppercase">
+                Update Profile Photo
+              </div>
+            </div>
+          </label>
+        </div>
+      </div> -->
+      <div class="container">
+        <div class="row custom-wrapper">
+          <div class="col-md-12">
+            
+      
+              <div class="group-gap">
+      
+                <div class="avatar-upload">
+                  <div class="avatar-edit">
+                    <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg"  formControlName="profil_pic" #fileInput (change)="uploadFile($event)" />
+                  </div>
+                  <div class="avatar-preview">
+                    <div id="imagePreview"  [style.backgroundImage]="'url('+ merchantImage +')'">
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <button type="submit" class="btn btn-danger btn-lg btn-block" (click)="fileInput.click()">Upload Image</button>
+      
+            
+      
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12 edit_information">
+        
+          <!-- <h3 class="text-center-1">Edit Personal Information</h3> -->
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="form-group">
+                <label class="profile_details_text">Business Name:</label>
+                <input type="text" [(ngModel)]="merchantBusinessName" formControlName="business_Name" class="form-control" placeholder="business name" [ngClass]="{ 'is-invalid': submitted && f['business_Name'].errors }" required    >
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="form-group">
+                <label class="profile_details_text">Owner Name: </label>
+                <input type="text" [(ngModel)]="merchantName" formControlName="owner_name" class="form-control" placeholder="owner name" [ngClass]="{ 'is-invalid': submitted && f['owner_name'].errors }"  required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="form-group">
+                <label class="profile_details_text">Email Address:</label>
+                <input type="email" [(ngModel)]="merchantEmail" formControlName="email" class="form-control" placeholder="email"  required readonly>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="form-group">
+                <label class="profile_details_text">Contact Number:</label>
+                <input type="tel" [(ngModel)]="merchantNumber" formControlName="contact_number" class="form-control" placeholder="xxxxxxxx"  required pattern=[0-9]{10} readonly>
+                
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="form-group">
+                <label class="profile_details_text">GST Number:</label>
+                <input type="text" [(ngModel)]="merchantGstNumber" formControlName="gst" class="form-control" placeholder="xxxxxx000" [ngClass]="{ 'is-invalid': submitted && f['gst'].errors }"  required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="form-group">
+                <label class="profile_details_text">Whats app Number:</label>
+                <input type="text" [(ngModel)]="merchantWhatsappNumber" formControlName="w_number" class="form-control" placeholder="xxxxxx" [ngClass]="{ 'is-invalid': submitted && f['w_number'].errors }"  required>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="form-group">
+                <label class="profile_details_text">Business Location:</label>
+                <input type="text" formControlName="business_location" class="form-control" placeholder="location"  required>
+              </div>
+            </div>
+          </div> -->
+          <!-- <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="form-group">
+                <label class="profile_details_text">Latitude:</label>
+                <input type="text" name="Latitude" class="form-control"  value="" required >
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="form-group">
+                <label class="profile_details_text">Longitude: </label>
+                <input type="text" name="Longitude" class="form-control" value="" required>
+              </div>
+            </div>
+          </div> -->
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="form-group">
+                <label class="profile_details_text">Merchant PAN:</label>
+                <input type="text" [(ngModel)]="merchantPan" formControlName="merchant_pan" class="form-control" placeholder="xxxxx" required readonly >
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="form-group">
+                <label class="profile_details_text">Merchant Adhaar: </label>
+                <input type="text" [(ngModel)]="merchantAadhar" formControlName="merchant_adhaar" class="form-control" placeholder="xxxx"  required readonly>
+              </div>
+            </div>
+          </div>
+          <div class="row"> 
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="form-group">
+                <label class="profile_details_text">Pincode: </label>
+                <input type="text" [(ngModel)]="merchantPincode" formControlName="pincode" class="form-control" placeholder="xxxx" [ngClass]="{ 'is-invalid': submitted && f['pincode'].errors }" required >
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              <div class="form-group">
+                <label class="profile_details_text">Address: </label>
+                <input type="text" [(ngModel)]="merchantAddress" formControlName="address" class="form-control" placeholder="xxxx"  [ngClass]="{ 'is-invalid': submitted && f['address'].errors }" required >
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 submit">
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Update Profile
+                  <i class="fa fa-spinner fa-spin" *ngIf="loading" ></i>
+                </button>
+              </div>
+            </div>
+          </div>
+       
+      </div>
+    
+    </form>
+
+    

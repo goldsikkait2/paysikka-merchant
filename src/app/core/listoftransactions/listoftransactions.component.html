@@ -1,0 +1,42 @@
+<div class="container wrapper">
+    <div class="col-md-12 mb-4 " >
+      <!-- <h2 class="head">List of Transactions</h2> -->
+      
+      <div class="search" >
+        <i class="fa fa-search"></i>
+        <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="term">
+        <button class="btn btn-primary">Search</button>
+      </div>
+      
+    </div>
+    <div class="table-responsive">
+    <table class="table table-bordered table-hover w-100" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th class="col-md-2">Date</th>
+                <!-- <th >USER_ID</th> -->
+                <!-- <th >TYPE</th> -->
+                <th class="col-md-1">STATUS</th>
+                <th class="col-md-1">POINTS</th>
+                <th class="col-md-3">MARCHENT UPI</th>
+                <th class="col-md-2">MESSAGE</th>
+                <th class="col-md-3">VPA</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let data of ListofTransactions |filter:term  ">
+            <tr>
+                <td>{{data.date }}</td>
+                <!-- <td class="highlight">{{data.userid}}</td> -->
+                <!-- <td>{{data.type}}</td> -->
+                <td>{{data.status }}</td>
+                <td>{{data.points}}</td>
+                <td>{{data.mupi }}</td>
+                <td>{{data.message}}</td>
+                <td>{{data.vpa}}</td>
+            </tr>
+            
+        </tbody>
+        <!-- <div  class="offset-6" style="font-style:italic;" *ngIf="!!term">   No Record Found </div> -->
+    </table>
+  </div>
+  </div>

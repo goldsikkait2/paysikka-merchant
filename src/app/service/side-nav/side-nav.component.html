@@ -1,0 +1,68 @@
+
+
+
+<nav id="sidebar" class="sidebar" [class.togglenav]="remove">
+
+    <div class="sidebar-content">
+  
+      <div class="sidebar-header" style="    margin-top: -1rem;">
+        <a class="logo" routerLink="/merchant/dashboard" routerLinkActive="active">
+         <img src="../../../assets/image/menu1.png" alt="" style="width:100%;height:100%;padding: 22px;">
+        </a>
+        
+        
+      </div>
+      <div class="image">
+        <img [src]="img" style="    border-radius:50%;width: 114%;
+        padding: 1px 8px;
+        height: 132px;     margin-left: -20px;" alt="">
+       <p style="text-align: center;
+       text-transform: colo;
+       text-transform: capitalize;
+       color: white;
+       margin-bottom: -16px; margin-left: -25px;
+    margin-top: 9px; ">{{merchant_Bname}}</p>
+        
+      </div>
+      <h5 style="    text-align: center;
+      color: white;
+      margin-top: 12px;
+      text-transform: capitalize; margin-left: -21px;">{{merchant_resp_add}}</h5>
+  
+      <div class="sidebar-menu">
+        <ul *ngIf="roleId == 0">
+          <li *ngFor="let menu of menus"
+              [ngClass]="{'active': menu.active , 'sidebar-dropdown':menu.type === 'dropdown' , 'header-menu':menu.type === 'header'}">
+            <span *ngIf="menu.type === 'header'">{{menu.title}}</span>
+            <a *ngIf="menu.type !== 'header' && menu.type !== 'simple'" (click)='toggle(menu)'>
+              <i class="{{menu.icon}}"></i>
+              <span>{{menu.title}}</span>
+              <span *ngIf="menu.badge" class="badge badge-pill" [ngClass]="menu.badge.class">{{menu.badge.text}}</span>
+            </a>
+            <a *ngIf="menu.type === 'simple'" [routerLink]="[menu.routerLink]" routerLinkActive="active"
+               [routerLinkActiveOptions]="menu.routerOptions" (click)='toggle(menu)'>
+              <i class="{{menu.icon}}"></i>
+              <span>{{menu.title}}</span>
+              <span *ngIf="menu.badge" class="badge badge-pill" [ngClass]="menu.badge.class">{{menu.badge.text}}</span>
+            </a>
+            <div *ngIf="menu.type === 'dropdown'" class="sidebar-submenu" [@slide]="getState(menu)">
+              <ul>
+                <li *ngFor="let submenu of menu.submenus;">
+                  <a *ngIf="submenu.type === 'simple'" [routerLink]="[submenu.routerLink]"
+                     routerLinkActive="active" [routerLinkActiveOptions]="submenu.routerOptions"
+                     (click)='toggle(submenu)'>
+                    <i class="{{submenu.icon}}"></i>
+                    <span>{{submenu.title}}</span>
+                    <span *ngIf="submenu.badge" class="badge badge-pill"
+                          [ngClass]="submenu.badge.class">{{submenu.badge.text}}</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  

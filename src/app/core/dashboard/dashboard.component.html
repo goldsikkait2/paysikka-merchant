@@ -79,11 +79,15 @@
                 <div class="card-block">
                     <h6 class="m-b-20" style="    padding: 3px 12px;
                     color: #4152a5;">Merchant QR code</h6>
-                    <img type="button"(click)="popup = true" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal--specialPromo"   class="offset-3" width="60px" height="60px" src="../../assets/image/qr.png" alt="qr_code"> 
-                    <a  class="mybtn offset-3" (click)="downloadImg('../../assets/image/qr.png','QR_code')" >Download</a>
+                    <img type="button"(click)="popup = true" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal--specialPromo"   class="offset-3" width="60px" height="60px" [src]="localstorageQrcode" alt="qr_code"> 
+                    <a  class="mybtn offset-3" (click)="downloadImg(localstorageQrcode,'QR_code')" >Download</a>
                 </div>
             </div>
+           
                 </div>
+                <h5> 
+                  
+                </h5>
         <!-- Modal -->
         <div  class="overlay d-flex mt-5"  *ngIf="popup" id="myModal--specialPromo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document" class="popup">
@@ -91,34 +95,42 @@
                   <div class="modal-header">
                      <h4 class="modal-title" id="myModalLabel">My QR Code</h4>
                   </div>
-                  <div class="modal-body">
-                     <img class="qr-img" src="../../assets/image/qr.png" alt="qr code" />
-                     <div> 
-                     <button type="button" class="btn-1 btn-success"><i class="bi bi-share"></i><small>Share</small> </button> 
-                     <button type="button" class="btn-2 btn-danger"><i class="bi bi-cloud-arrow-down"></i> <small>  Download </small></button>
+                  <div class="modal-body" class=" display: flex;
+                  justify-content: center;" style="    margin-left: -30px;">
+                     <img class="qr-img" [src]="localstorageQrcode" alt="qr code" />
+                     <div class="d-flex"> 
+                    <div>  <button type="button" class="btn-1 btn-success"><i class="bi bi-share"></i><small>Share</small> </button>  </div>
+                  <div>    <button type="button" (click)="downloadImg(localstorageQrcode,'QR_code')" class="btn-2 btn-danger"><i class="bi bi-cloud-arrow-down"></i> <small>  Download </small></button> </div>
                     </div>
+                    <div class="m-4"> 
+                        <div class="offset-2" style="white-space: nowrap;"> 
+                        <b>UPI ID: {{localstroageUpiid}} </b> 
+                    </div>
+                    </div> 
                   </div>
-                  <hr>
-                  <div class="container">
+                  <!-- <hr> -->
+                
+                  <!-- <div class="container">
                     <div class="row">
                         <div class="col-md-4">
                             <h3 style="font-weight:500px ; margin-top: -60px;text-transform: capitalize;">upi id</h3>
+                           
                         </div>
-                        <div class="col-md-2"></div>
-                        <div class="col-md-4" style="font-weight:bold ; margin-top: -50px;">
-                            paysikkaupi4567898
+                        <div class="col-md-2"> {{ localstroageUpiid}}</div>
+                        <div class="col-md-4" style="font-weight:bold ; ">
+                           
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <h3 style="font: weight 500px;text-transform: capitalize;">account</h3>
+                            <h5 style="font: weight 500px;text-transform: capitalize;">account</h5>
                         </div>
                         <div class="col-md-2"></div>
                         <div class="col-md-4" style="font-weight:bold ;">
                            ***********4676555
                         </div>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal" class="close" (click)="popup = false">&times;</button>
                     <!-- <a ></a> -->

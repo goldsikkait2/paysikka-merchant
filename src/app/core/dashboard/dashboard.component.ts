@@ -21,6 +21,10 @@ export class DashboardComponent implements OnInit {
   collectedwalletpoint: any;
   ListofTransactions: any;
   term:any;
+  localstorageData: any;
+  store: any
+  localstroageUpiid: any;
+  localstorageQrcode: any;
  
   
   
@@ -29,8 +33,17 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
    
-   let store= localStorage.getItem('user');
-   if(!store){
+   this.store= localStorage.getItem('user');
+  this.localstorageData=JSON.parse(this.store)
+  this.localstroageUpiid = this.localstorageData.user.upiid
+  this.localstorageQrcode = this.localstorageData.user.Qrcode
+
+   console.log("keys" , this.localstorageQrcode, this.localstroageUpiid  );
+
+   
+   
+   
+   if(!this.store){
     this.router.navigate(['/auth']);
 
    }
@@ -40,7 +53,10 @@ export class DashboardComponent implements OnInit {
     this.getTotalWalletPoints();
     this.getCollectedWalletPoints();
     this.getListOfTransactions();
+    
+ 
   }
+ 
   getTransactions(): void {
     const currentUser = this.authserv.getUser();
 
@@ -94,9 +110,11 @@ export class DashboardComponent implements OnInit {
       
     });
   }
+
   downloadImg(url:any,name:any){
     saveAs(url, name+'.png');
   }
+ 
  
 }
 

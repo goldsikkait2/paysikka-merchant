@@ -1,15 +1,17 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <section class="container pt-3 mb-3">
-    <h2 class="h3 block-title text-center mt-3"><small style="    color: #4152a5;
-        font-size: 2rem;">Paysikka Registered Outlet </small></h2>
+    <h2 class="h3 block-title text-center mt-3"><small style="color: #4152a5;
+            font-size: 25px;     text-transform: inherit;
+        
+        ">PAYSIKKA REGISTERED OUTLET  </small></h2>
     <div class="row pt-5 mt-30">
         <!-- <i class="fa fa-user-circle-o fa-3x head-icon"></i> -->
         <div class="col-lg-4 col-sm-6 mb-30 pb-5 mt-3" *ngFor="let data of response">
-            <a class="card" routerLink="/merchant/outlet-transaction/:id">
+            <a class="card" routerLink="/merchant/outlet-transaction/{{data.upiid}}">
                 <div class="box-shadow bg-white rounded-circle mx-auto text-center" style="width: 90px; height: 90px; margin-top: -45px;"><img [src]="data.merchantimage" alt=""></div>
-                <div class="card-body text-center">
+                <div class="card-body text-center" style="text-transform: uppercase;">
                     <h3 class="card-title pt-1"> {{data.businessname}}</h3>
-                    <p class="card-text text-sm">Branch: {{data.address}}  <br> Register Outlet No: {{lengthResponse}} </p><span  class="text-sm text-uppercase font-weight-bold">  <a routerLink="/merchant/outlet-transaction/:id"> View Transactions&nbsp; </a><i class="fe-icon-arrow-right"></i></span>
+                    <p class="card-text text-sm"> Merchant Name: {{data.merchantname}}  <br> Branch: {{data.address}} <br> State: {{data.state}}  </p><span  class="text-sm text-uppercase font-weight-bold">  <a routerLink="/merchant/outlet-transaction/{{data.upiid}}"> View Transactions&nbsp; </a><i class="fe-icon-arrow-right"></i></span>
                 </div>
             </a>
         </div>

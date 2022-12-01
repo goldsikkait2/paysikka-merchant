@@ -22,12 +22,14 @@ export class ListofoutletsComponent implements OnInit {
 
     let headers= new HttpHeaders().set('Authorization',currentUser.token)
     this.api.get(`outlet/list`,{headers}).subscribe((r: any) => {
-     this. response = r
+     this.response = r
      this.lengthResponse =r.length
      console.log("length" , this.lengthResponse);
      
-      console.log("response" ,r );
-      
+      console.log("responseupiidfdf" ,this.response);
+      for(let data of this.response){
+        console.log('sasassas',data.upiid)
+      }
     });
   }
 

@@ -1,6 +1,6 @@
 <div class="container wrapper">
 
-       <h3 style="color: #4152a5;"> Laptop Services   </h3> 
+       <h3 style="color: #4152a5;"> {{filterdata[0].businessname}}  </h3> 
        <!-- <div class="d-flex"> 
        
       <div>  <b>Register Outlet No:   4 </b> &nbsp; <b>Branch: Masabtank,Hyderabad. </b>  </div>
@@ -8,9 +8,9 @@
     
 </div>  -->
 <div class="d-flex ">
-    <div class="p-2"> <b>Register Outlet No:   4 </b> <br> <b>Branch: Masabtank,Hyderabad. </b> <br> <b>UPI ID: pqrs@bank </b> </div>
+    <div class="p-2"> <b>GST No: {{filterdata[0].gstnumber}}</b> <br> <b>Branch: {{filterdata[0].address}} </b> <br> <b>UPI ID:{{filterdata[0].upiid}}</b> </div>
     <div class="p-2"> </div>
-    <div class="ml-auto p-2"> <img class="qr-img" width="70" src="../../../assets/image/qr.png" alt="qr code" /></div>
+    <div class="ml-auto p-2"> <img class="qr-img" width="70" [src]="filterdata[0].Qrcode" alt="qr code" /></div>
   </div>
     
     <div class="col-md-12 mb-4 " >
@@ -31,22 +31,22 @@
                 <!-- <th >USER_ID</th> -->
                 <!-- <th >TYPE</th> -->
                 <th class="col-md-1">STATUS</th>
-                <th class="col-md-1">POINTS</th>
-                <th class="col-md-3">MARCHENT UPI</th>
-                <th class="col-md-2">MESSAGE</th>
-                <th class="col-md-3">VPA</th>
+                <th class="col-md-1">TYPE</th>
+                <th class="col-md-3">MESSAGE</th>
+                <th class="col-md-2">AMOUNT</th>
+                <th class="col-md-3">POINTS</th>
             </tr>
         </thead>
-        <tbody >
+        <tbody *ngFor="let data of response " >
             <tr>
-                <td>2022-09-26T09:41:22.171Z</td>
+                <td>{{data.date}}</td>
                 <!-- <td class="highlight">{{data.userid}}</td> -->
                 <!-- <td>{{data.type}}</td> -->
-                <td>success</td>
-                <td>0 </td>
-                <td>ipay.94.198784.8341554858@icici</td>
-                <td>Your Transaction of ₹1</td>
-                <td>ipay.94.198784.9177123162@icici</td>
+                <td>{{data.status}}</td>
+                <td>{{data.type}} </td>
+                <td>{{data.message}}</td>
+                <td>{{data.amount}}</td>
+                <td>{{data.points}}</td>
             </tr>
             
         </tbody>

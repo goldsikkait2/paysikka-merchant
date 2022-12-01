@@ -48,7 +48,7 @@
             <div *ngIf="menu.type === 'dropdown'" class="sidebar-submenu" [@slide]="getState(menu)">
               <ul>
                 <li *ngFor="let submenu of menu.submenus;">
-                  <a *ngIf="submenu.type === 'simple'" [routerLink]="[submenu.routerLink]"
+                  <a *ngIf="submenu.type === 'simple' " [routerLink]="[submenu.routerLink]"
                      routerLinkActive="active" [routerLinkActiveOptions]="submenu.routerOptions"
                      (click)='toggle(submenu)'>
                     <i class="{{submenu.icon}}"></i>

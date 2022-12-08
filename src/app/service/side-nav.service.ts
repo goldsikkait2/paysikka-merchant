@@ -1,5 +1,8 @@
+import { HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { ApiService } from '../api.service';
+import { AuthService } from '../_services/auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,11 +11,16 @@ export class SideNavService {
 
   toggled: any;
   public toggle$: Subject<any> = new Subject;
-  constructor() { }
+ 
+  constructor( private authservice: AuthService, private api: ApiService) { }
 
   isToggle(data: any) {
     this.toggle$.next(data);
   }
+  ngOnInit(){
+
+  }
+
 
   menus = [
     {
@@ -39,7 +47,7 @@ export class SideNavService {
       icon: 'fa-solid fa-rectangle-ad',
       active: false,
       type: 'simple',
-      routerLink: 'promotions',
+      routerLink: 'prmos',
       routerOptions: {},
       // role: 0,
 

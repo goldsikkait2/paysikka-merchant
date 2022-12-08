@@ -19,14 +19,7 @@ export class OutlettransactionComponent implements OnInit {
   constructor( private authserv: AuthService, private api: ApiService,private router:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.router.params.subscribe((params)=>{
-      console.log("params", params);
-      this.paramGlobal = params
-      console.log("dsfgfdgfg", this.paramGlobal.id);
-   this.getdata(this.paramGlobal);
-      
-      
-    })
+   
 
 
    this.getListOfOutletTransactions();

@@ -41,6 +41,8 @@ import { BranchregisterComponent } from './core/branchregister/branchregister.co
 import { ListofoutletsComponent } from './core/listofoutlets/listofoutlets.component';
 import { OutlettransactionComponent } from './core/outlettransaction/outlettransaction.component';
 import { ViewpromotionsComponent } from './core/viewpromotions/viewpromotions.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FirstpagepromotionComponent } from './core/firstpagepromotion/firstpagepromotion.component';
 
 
 
@@ -66,9 +68,11 @@ import { ViewpromotionsComponent } from './core/viewpromotions/viewpromotions.co
     ListofoutletsComponent,
     OutlettransactionComponent,
     ViewpromotionsComponent,
+    FirstpagepromotionComponent,
    
   ],
   imports: [
+   
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,

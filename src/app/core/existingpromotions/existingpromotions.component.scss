@@ -196,3 +196,173 @@
    font-size: 20px;
  }
  
+ .animate-charcter
+ {
+    // text-transform: uppercase;
+   background-image: linear-gradient(
+     -225deg,
+     #231557 0%,
+     #44107a 29%,
+     #ff1361 67%,
+     #e2df77 100%
+   );
+   background-size: auto auto;
+   background-clip: border-box;
+   background-size: 200% auto;
+   color: #fff;
+   background-clip: text;
+  //  text-fill-color: transparent;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: textclip 2s linear infinite;
+   display: inline-block;
+      //  font-size: 190px;
+ }
+ 
+ @keyframes textclip {
+   to {
+     background-position: 200% center;
+   }
+ }
+
+ //text animation
+ .animate-charcter
+{
+   // text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #70eb58 0%,
+    #297a10 29%,
+    #6176df 67%,
+    #4152a5 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+ //  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+     //  font-size: 190px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+//button
+.button {
+  /* text styles */
+  font-size: 11px;
+  line-height: 18px;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  
+  /* box styles */
+  display: inline-block;
+  height: 19px;
+  padding: 0 10px;
+  border: 1px solid;
+  border-color: #2d86b6 #24659e #255796;
+  border-radius: 21px;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2) inset, 0 1px 1px rgba(1, 4, 8, 0.2);
+  
+  /* gradients */
+  background-color: #52b6ec;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF52B6EC', endColorstr='#FF2E75CE');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #52b6ec), color-stop(100%, #2e75ce));
+  background-image: -webkit-linear-gradient(top, #52b6ec 0%, #2e75ce 100%);
+  background-image: -moz-linear-gradient(top, #52b6ec 0%, #2e75ce 100%);
+  background-image: -o-linear-gradient(top, #52b6ec 0%, #2e75ce 100%);
+  background-image: linear-gradient(top, #52b6ec 0%, #2e75ce 100%);
+    
+}
+.button:hover {
+  text-decoration: none;
+  border-color: #377cae #175a9c #0c4893;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2) inset, 0 1px 1px rgba(5, 64, 140, 0.2);
+  
+  background-color: #4fa6e4;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF4FA6E4', endColorstr='#FF1462C4');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4fa6e4), color-stop(100%, #1462c4));
+  background-image: -webkit-linear-gradient(top, #4fa6e4 0%, #1462c4 100%);
+  background-image: -moz-linear-gradient(top, #4fa6e4 0%, #1462c4 100%);
+  background-image: -o-linear-gradient(top, #4fa6e4 0%, #1462c4 100%);
+  background-image: linear-gradient(top, #4fa6e4 0%, #1462c4 100%);
+}
+.button:active {
+  border-color: #094b84 #094b84 #0f4585;
+  box-shadow: 0 1px 1px rgba(241, 243, 247, 0.2), 0 0 20px rgba(0, 0, 0, 0.5) inset;
+  
+  background-color: #1c7ec9;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF1C7EC9', endColorstr='#FF2395D9');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1c7ec9), color-stop(100%, #2395d9));
+  background-image: -webkit-linear-gradient(top, #1c7ec9 0%, #2395d9 100%);
+  background-image: -moz-linear-gradient(top, #1c7ec9 0%, #2395d9 100%);
+  background-image: -o-linear-gradient(top, #1c7ec9 0%, #2395d9 100%);
+  background-image: linear-gradient(top, #1c7ec9 0%, #2395d9 100%);
+}
+//modal
+.btn-lg{
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 14px;
+}
+ul{
+  list-style-type: none;  
+}
+
+// icons
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ 
+ .app {
+  &-btn {
+   width: 45%;
+   max-width: 160px;
+   color: #fff;
+   margin: 20px 10px;
+   text-align: left;
+   border-radius: 5px;
+   text-decoration: none;
+   font-family: "Lucida Grande", sans-serif;
+   font-size: 10px;
+   text-transform: uppercase;
+   &.blu {
+    background-color: #101010;
+    transition: background-color 0.25s linear;
+    &:hover {
+     background-color: #454545;
+    }
+   }
+   i {
+    width: 20%;
+    text-align: center;
+    font-size: 28px;
+    margin-right: 7px;
+   }
+   .big-txt {
+    font-size: 17px;
+    text-transform: capitalize;
+   }
+  }
+ }
+ 
+
+ @media (max-width: 768px){ 
+  .align-self-end2{
+    margin-left: 3rem !important;
+  }
+ }

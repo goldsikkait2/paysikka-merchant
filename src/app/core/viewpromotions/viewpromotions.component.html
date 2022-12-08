@@ -1,24 +1,15 @@
 <section class="scheme-subscribe-list row ">
-
-    <section class="col-md-12 mt-3 ml-4 pl-4">
-      <h3 class="offset-4" style="    color: #4152a5;">Promotion Details</h3>
+  
+    <section class="col-md-12 mt-3 ml-4 pl-4" *ngFor="let data of ListofPomotionById">
+      <h3 class="offset-4 pb-4 mt-4" style="    color: #4152a5;">Promotion Details</h3>
+              <h5>{{data.promotiontype}}</h5>
   
       <div class="scheme-content ml-4 mr-4">
         
         <div>
-            <ul> 
-                <li>   Paysikka offers unique promotional Plus scheme earn benefits of getting one month free installment from Goldsikka on completion of eleven months.</li>
-                <li>   Purchase any reward of your choice at just 50% V.A. after completion of eleven months tenure</li>
-                <li>   Paysikka offers unique promotional Plus scheme earn benefits of getting one month free installment from Goldsikka on completion of eleven months.</li>
-                <li>   Purchase any reward of your choice at just 50% V.A. after completion of eleven months tenure</li>
-                <li>   Paysikka offers unique promotional Plus scheme earn benefits of getting one month free installment from Goldsikka on completion of eleven months.</li>
-                <li>   Purchase any reward of your choice at just 50% V.A. after completion of eleven months tenure</li>
-
-                <li>   Paysikka offers unique promotional Plus scheme earn benefits of getting one month free installment from Goldsikka on completion of eleven months.</li>
-                <li>   Purchase any reward of your choice at just 50% V.A. after completion of eleven months tenure</li>
-
-                <li>   Paysikka offers unique promotional Plus scheme earn benefits of getting one month free installment from Goldsikka on completion of eleven months.</li>
-                <li>   Purchase any reward of your choice at just 50% V.A. after completion of eleven months tenure</li>
+            <ul > 
+                <li> {{data.description}}</li>
+               
                
 
             </ul>

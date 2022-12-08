@@ -35,6 +35,10 @@ remove: boolean = true;
   merchant_Bname: any;
   merchant_image: any;
   img: any;
+ 
+  response: any;
+  lengthResponse: any;
+  sidemenuBlock:boolean =false
 
   constructor(private sideNavService:SideNavService , private authservice: AuthService , public api: ApiService) { 
     this.menus = this.sideNavService.getMenus();
@@ -75,7 +79,8 @@ remove: boolean = true;
   }
 
   ngOnInit(): void {
-  this.  getMerchantProfile()
+  this.getMerchantProfile();
+ 
   }
   toggle(currentMenu:any) {
     if (currentMenu.type === 'dropdown') {
@@ -115,6 +120,7 @@ remove: boolean = true;
       
     });
   }
+ 
  
 
 }

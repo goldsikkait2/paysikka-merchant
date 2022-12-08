@@ -24,7 +24,7 @@ export class ListofoutletsComponent implements OnInit {
     this.api.get(`outlet/list`,{headers}).subscribe((r: any) => {
      this.response = r
      this.lengthResponse =r.length
-     console.log("length" , this.lengthResponse);
+     console.log("lengthmerchant register" , this.lengthResponse);
      
       console.log("responseupiidfdf" ,this.response);
       for(let data of this.response){

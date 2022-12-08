@@ -1,49 +1,76 @@
-<section class="mt-4 mb-4">
+<!-- <section class="mt-4 mb-4">
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
-          <div class="prom-card">
-            <div class="d-flex">
-              <div class="col-md-10">
-        <a routerLink="/merchant/all-promotions" style="text-decoration: none">   <p class="pr-text" style="color: #03406D;"> All Promotions</p> </a>
+         
+        <div class="col-md-4 p-3" *ngFor="let data of lengthofPomotions">
+          
+          <div class="prom-card h-100">
+            <h6 class="pro-head mb-2">Promotions ID: {{data.promotionid}}</h6>  
+            <div >
+              <div class="col-md-10 animate">
+        <a routerLink="/merchant/all-promotions/{{data.promotionid}}" style="text-decoration: none;text-transform: uppercase; text-align: center;">   <p class="pr-text"style="color: #03406D;"> {{data.promotiontype}}</p> </a>
               </div>
-              <div class="col-md-2">
+              <div  style="
+              text-align:center !important; padding: 0 5px 12px 5px !important;  margin: -10px 0 !important;">
+                <small>   {{data.description}} </small>
               </div>
+              
             </div>
-            <p class="cont-text"><span  style="color: #4152a5; ">Total :</span> <a routerLink="/merchant/all-promotions"  style="font-size: 34px; text-decoration: none;">  102 </a></p>
-            <!-- <p class="span-text"><span class="perc-text">20%</span> Increased last month</p> -->
+           
+            
           </div>
         </div>
-        <div class="col-md-4">
-            <div class="prom-card">
-              <div class="d-flex">
-                <div class="col-md-10">
-                    <a style="text-decoration: none;" routerLink="/merchant/active-promotions">    <p class="pr-text" style="color: #03406D;">    Active Promotions </p> </a>
-                </div>
-                <div class="col-md-2">
-                </div>
-              </div>
-              <p class="cont-text"> <span style="color: #4152a5;">Total :</span>    <a style="text-decoration: none;font-size:34px ; " routerLink="/merchant/active-promotions">   28 </a></p>
-              <!-- <p class="span-text"><span class="perc-text">20%</span> Increased last month</p> -->
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="prom-card">
-              <div class="d-flex">
-                <div class="col-md-10">
-                    <a routerLink="/merchant/recent-promotions" style="text-decoration: none;">     <p class="pr-text" style="color: #03406D;"> Recent Purchased Promotions</p> </a>
-                </div>
-                <div class="col-md-2">
-                </div>
-              </div>
-              <p class="cont-text" style="color:#161616"><span style="color: #4152a5;">Total :</span>  <a routerLink="/merchant/recent-promotions"  style="text-decoration: none; font-size:34px">  3 </a></p>
-             
-                
-             
-              <!-- <p class="span-text"><span class="perc-text">20%</span> Increased last month</p> -->
-            </div>
-          </div>
+
+          
       </div>
     </div>
-  </section>
+  </section> -->
+
+  <section class="mt-4 mb-4"> 
+   
+    <div class="container"> 
+        <div class="row"> 
+            
+    <div class="col-md-4" *ngFor="let data of lengthofPomotions">
+        <div class="pro-card mb-4 h-90" >
+          <div class="d-flex">
+            <div class="col-md-10">
+              
+                
+               <h5 class="pro-head mb-2">Promotions ID: {{data.promotionid}}</h5>   
+            
+    
+                <div class="mt-4 pt-3" style=" text-align: center !important; text-transform: uppercase" > 
+               <b class="animate-charcter"> {{data.promotiontype}} </b>
+              </div>
+              <div  class="mt-2 p-2" style="
+              text-align:center; padding: 0 5px 0 5px;  margin: 10px 0;">
+                <small> {{data.description}}</small>
+              </div>
+    
+            </div>
+            <div class="col-md-2">
+            </div>
+          </div>
+          <div class="d-flex ">
+            <div class="col-md-12">
+              <div class="d-flex justify-content-between ">
+               <small class="align-self-end" >Updated At: {{data.updatedAt | slice:0:-14}} </small>
+                <button class="btn view-btn align-self-end" routerLink="/merchant/all-promotions/{{data.promotionid
+                }}">View More</button>
+                
+    
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+     
+    </div>
+    </div>
+    
+    </section>
+    
+    
 

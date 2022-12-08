@@ -6,6 +6,7 @@ import { BranchregisterComponent } from './core/branchregister/branchregister.co
 
 import { DashboardComponent } from './core/dashboard/dashboard.component';
 import { ExistingpromotionsComponent } from './core/existingpromotions/existingpromotions.component';
+import { FirstpagepromotionComponent } from './core/firstpagepromotion/firstpagepromotion.component';
 import { ListofoutletsComponent } from './core/listofoutlets/listofoutlets.component';
 import { ListoftransactionsComponent } from './core/listoftransactions/listoftransactions.component';
 import { OutlettransactionComponent } from './core/outlettransaction/outlettransaction.component';
@@ -56,12 +57,17 @@ const routes: Routes = [
         component:ProfileComponent
       },
       {
+        path:'prmos',
+        
+        component:FirstpagepromotionComponent
+      },
+      {
         path:'promotions',
         
         component:PromotionsComponent
       },
       {
-        path:'all-promotions',
+        path:'all-promotions/:id',
         
         component:ExistingpromotionsComponent
       },

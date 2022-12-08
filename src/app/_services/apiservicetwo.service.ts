@@ -6,29 +6,18 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
-
+export class ApiservicetwoService {
   serverEndpoint = `${environment.apiUrl}`;
-  public merchantName$:Subject<any> = new Subject;
-  public merchantBname$:Subject<any> = new Subject;
-  public merchantImage$:Subject<any> = new Subject;
-  
-  constructor(
+  constructor( 
     private http: HttpClient
   ) {
     if (environment.production) {
       this.serverEndpoint = environment.apiUrl;
     }
   }
-  merchentData(data:any ){
-    this.merchantName$.next(data)
-   }
-   merchentBname(data:any ){
-    this.merchantBname$.next(data)
-   }
-   merchentImage(data:any ){
-    this.merchantImage$.next(data)
-   }
+ 
+  
+  
    
   /**
    *
@@ -36,7 +25,7 @@ export class ApiService {
    * @param data
    * @param headers
    */
-  post(endpoint: any, data: any,  headers?: {}) {
+  post(endpoint: any, data: any, data2:any,  headers?: {}) {
     return this.http.post(this.serverEndpoint + endpoint, data, headers);
   }
 
@@ -66,4 +55,5 @@ export class ApiService {
   put(endpoint:any, params?: {}) {
     return this.http.put(this.serverEndpoint + endpoint, params);
   }
+  
 }

@@ -28,6 +28,7 @@ export class TopNavComponent implements OnInit {
   notificationsModal: boolean =false;
   paramGlobal: any;
   ListofPromotionsTopNav: any;
+  ListofPromotions: any;
 
   constructor(private navService:SideNavService,private router:Router,private activeRoute:ActivatedRoute,private confirmBoxEvokeService: ConfirmBoxEvokeService,private authserv:AuthService,private api:ApiService) {
     this.navService.isToggle(this.opened = !this.opened);
@@ -36,6 +37,7 @@ export class TopNavComponent implements OnInit {
    }
    
   ngOnInit(): void {
+    
 
   }
 
@@ -44,6 +46,7 @@ export class TopNavComponent implements OnInit {
     this.navService.isToggle(this.opened = !this.opened)
  
   }
+
   ngDoCheck(){
     if(this.router.url === '/merchant/dashboard'  || this.router.url === '/'){
       this.title = 'Dashboard'
@@ -57,7 +60,7 @@ export class TopNavComponent implements OnInit {
     else if(this.router.url === '/merchant/promotions'){
       this.title = 'Promotions category' 
     }
-    else if(this.router.url === '/merchant/all-promotions/'){
+    else if(this.router.url === '/merchant/all-promotions:id'){
       this.title = 'All Promotions'
       
       

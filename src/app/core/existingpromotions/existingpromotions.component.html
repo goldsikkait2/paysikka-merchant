@@ -1,15 +1,35 @@
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <section class="mt-4 mb-4"> 
    
 <div class="container"> 
     <div class="row"> 
+   
+<div class="h-100 d-flex align-items-center justify-content-center  updown" *ngIf="ListofPromotions ==0">
+  <div class="mt-4 pt-4">
+    <div class="mt-4 pt-4"> 
+      <div class="mt-4 pt-4"> 
+        <div class="mt-4 pt-4"> 
+          <div class="mt-4 pt-4"> 
+    <h5>  No Promotions Found</h5>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
         
 <div class="col-md-4" *ngFor="let data of ListofPromotions">
+
+
+
+
     <div class="pro-card mb-4 h-90" >
       <div class="d-flex">
         <div class="col-md-10">
           <div class="row"> 
             <div class="col-md-10"> 
-           <p class="pro-head mb-2"> PACKAGE COST: <b>{{data.cost}}/-  </b></p>  
+           <p class="pro-head mb-2"> PACKAGE COST: <b>{{data.cost}}/- </b></p>  
           </div>
           <div class="col-md-2">
            <small *ngIf="data.status===1"> <b class="animate-charcter" style="color: rgb(122, 230, 122);">Active</b> </small>
@@ -54,7 +74,7 @@
                   </div>
                   <div class="modal-body">
                    
-                      <div class="mb-3">
+                      <!-- <div class="mb-3">
                         <label for="content"> <h4 >Content </h4></label>
                         <div class="input-group pb-2 ">
                           <input type="text" id="content" class="form-control" formControlName="content"   placeholder="Type Content here">
@@ -64,20 +84,49 @@
                           <input class="form-control form-control-lg" formControlName="image"  type="file" accept=".png, .jpg, .jpeg"   #fileInput (change)="uploadFile($event)">
                           
                         </div>
+                      </div> -->
+                      <div class="container">
+                        <div class="text-center"> 
+                       <h2 class="h3 py-4"> DOWNLOAD NOW</h2>
+                       <!-- App Store button -->
+
+                       <a href="https://www.kobinet.com.tr/" target="_blank" class="market-btn apple-btn" role="button">
+                         <span class="market-button-subtitle">Download on the</span>
+                         <span class="market-button-title">App Store</span>
+                       </a>
+                      
+                       <!-- Google Play button -->
+                       <a href="https://www.kobinet.com.tr/" target="_blank" class="market-btn google-btn" role="button">
+                         <span class="market-button-subtitle">Download on the</span>
+                         <span class="market-button-title">Google Play</span>
+                       </a>
+                       
+                       <!-- Windows store button -->
+                       <!-- <a href="https://www.kobinet.com.tr/" target="_blank" class="market-btn windows-btn" role="button">
+                         <span class="market-button-subtitle">Download on the</span>
+                         <span class="market-button-title">Windows Store</span>
+                       </a> -->
+                       
+                       <!-- Amazon button -->
+                       <!-- <a href="https://www.kobinet.com.tr/" target="_blank" class="market-btn amazon-btn" role="button">
+                         <span class="market-button-subtitle">Order now at</span>
+                         <span class="market-button-title">Amazon.com</span>
+                       </a> -->
                       </div>
-                    
-                  </div>
-                  <!-- (click)="modal.close('Save click')" -->
-                  <button type="submit" class="btn btn-primary btn-lg btn-block" >Submit
+                       </div >
+                       <div class="mt-4 p-2"> 
+                          <small style="color: red; text-shadow: 0 0 black;
+                          text-align: justify;"> <b>Note:  <span> Inorder to Buy this promotion package need to dowload our 
+                            <span style="padding-left: 48px;">  app at  playstore & appstore Inconvenience is regretted </span></span>  </b></small>
+                        </div>
+                        </div>
+                  
+                  <!-- <button type="submit" class="btn btn-primary btn-lg btn-block" >Submit
                     <i class="fa fa-spinner fa-spin" *ngIf="loading" ></i>
-                  </button>
+                  </button> -->
                 
                
-                  <!-- <div class="row">
-                  <div class="col-md-12">
-                   <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
-                  </div>
-                </div> -->
+                 
               </form>
                 </ng-template>
               

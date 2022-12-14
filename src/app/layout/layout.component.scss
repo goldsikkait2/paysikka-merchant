@@ -27,26 +27,19 @@
   
   }
   
-  // .sidebar {
-  //     height: 100%;
-  //     width: 270px;
-  //     position: fixed;
-  //     z-index: 1;
-  //     top: 57px;
-  //     left: 0;
-  //     background-color: #0076b7;
-  //     overflow-x: hidden;
-  //     transition: 0.5s;
-  //   }
-  //   .main {
-  //     width: calc(100% - 270px);
-  //     float: right;
-  //     margin-top: 57px;
-      
-  //   }
-  //   .top-nav{
-  //     width: 100%;
-  //     position: fixed;
-  //   }
+
     
-    
+  .no-view {
+    display: none;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .no-view {
+      display: block;
+      background-color: lightblue;
+    }
+    .container-message {
+      display: none;
+    }
+  }
+  

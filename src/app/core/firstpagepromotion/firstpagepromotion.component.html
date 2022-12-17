@@ -44,22 +44,27 @@
     <table class="table table-bordered table-hover w-100" cellspacing="0" width="100%">
         <thead>
             <tr>
-                <th class="col-md-2">Date</th>
-                <th class="col-md-1">STATUS</th>
-                <th class="col-md-1">POINTS</th>
-                <th class="col-md-3">MARCHENT UPI</th>
-                <th class="col-md-2">MESSAGE</th>
-                <th class="col-md-3">VPA</th>
+              <th class="col-md-2"> Created At</th>
+                <th class="col-md-2">Updated At</th>
+                <th class="col-md-2">Payment ID</th>
+                <th class="col-md-1">Status</th>
+                <th class="col-md-1"> Cost</th>
+                <th class="col-md-3" >Validity</th>
+                <th class="col-md-2"> Category </th>
+                <th class="col-md-3">Description</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>28/12/2022</td>
-                <td>Active</td>
-                <td>1000</td>
-                <td>paysikka@icic.com</td>
-                <td>done scucess full</td>
-                <td>adfsfds</td>
+        <tbody *ngFor="let data of listpromotions">
+            <tr>    
+              <td >{{data.createdAt}}</td>    
+                <td >{{data.updatedAt}}</td>  
+                <td > {{data.paymentid}}</td> 
+                <td  *ngIf="this.listpromotions[0].status===1"> Active </td>
+                <td  *ngIf="this.listpromotions[0].status===0"> Expired </td>
+                <td >{{data.cost}}</td>
+                <td  >{{data.validity}}</td>
+                <td >{{data.promotiontypedetails[0].promotiontype }}</td>
+                <td >{{data.promotiontypedetails[0].description }}</td>
             </tr>
             
         </tbody>

@@ -1,77 +1,86 @@
 <section class="mt-4 mb-4">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div type="button" class="prom-card h-300">
-            <div class="d-flex">
-              <div class="col-md-10" routerLink="/merchant/promotions">
-                <p class="pr-text" style="color: #3251eb; cursor:default">Paysikka Promotions</p>
-              </div>
-              <div class="col-md-2">
-              </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div type="button" class="prom-card h-300">
+          <div class="d-flex">
+            <div class="col-md-10" routerLink="/merchant/promotions">
+              <p class="pr-text" style="color: #3251eb; cursor: default">
+                Paysikka Promotions
+              </p>
             </div>
-            <div class="p-3"> 
-            <div class="pb-4" > 
-             <small class="cont-text" routerLink="/merchant/promotions" style="cursor:default;color: #4152a5;"> <span>Number of promotions:</span> &nbsp;{{lengthofPomotionslength}}</small>
+            <div class="col-md-2"></div>
+          </div>
+          <div class="p-3">
+            <div class="pb-4">
+              <small
+                class="cont-text"
+                routerLink="/merchant/promotions"
+                style="cursor: default; color: #4152a5"
+              >
+                <span>Number of promotions:</span> &nbsp;{{
+                  lengthofPomotionslength
+                }}</small
+              >
             </div>
-        </div>
           </div>
         </div>
-        <!-- <div class="col-md-4">
+      </div>
+      <!-- <div class="col-md-4">
           <div class="prom-card" routerLink="/addPromotions" routerLinkActive="active">
             <p class="pr-text"> Rrecent purchased promotion</p>
        
             <p class="add-text">add up new Promotions to Merchants</p>
           </div>
         </div> -->
-        <!-- <div class="col-md-4">
+      <!-- <div class="col-md-4">
           <div class=" row d-flex justify-content-center">
             <div id="chart">
             </div>
           </div>
         </div> -->
-      </div>
     </div>
-  </section>
-  <!-- Transactions -->
-  <section class="mt-4 mb-4">
-    
-<div class="container wrapper " style="    margin-top: 5rem !important;">
-    <div class="col-md-12 mb-4 " >
-      <h5 class="head">Recent purchased promotions</h5>
+  </div>
+</section>
+<!-- Transactions -->
+<section class="mt-4 mb-4">
+  <div class="container wrapper" style="margin-top: 5rem !important">
+    <div class="col-md-12 mb-4">
+      <h5 class="head">Purchased promotions</h5>
     </div>
     <div class="table-responsive">
-    <table class="table table-bordered table-hover w-100" cellspacing="0" width="100%">
+      <table
+        class="table table-bordered table-hover w-100"
+        cellspacing="0"
+        width="100%"
+      >
         <thead>
-            <tr>
-              <th class="col-md-2"> Created At</th>
-                <th class="col-md-2">Updated At</th>
-                <th class="col-md-2">Payment ID</th>
-                <th class="col-md-1">Status</th>
-                <th class="col-md-1"> Cost</th>
-                <th class="col-md-3" >Validity</th>
-                <th class="col-md-2"> Category </th>
-                <th class="col-md-3">Description</th>
-            </tr>
+          <tr>
+            <th class="col-md-2">Created At</th>
+            <th class="col-md-2">Updated At</th>
+            <th class="col-md-2">Payment ID</th>
+            <th class="col-md-1">Status</th>
+            <th class="col-md-1">Cost</th>
+            <th class="col-md-3" style="text-align: center">Validity</th>
+            <th class="col-md-2">Category</th>
+            <th class="col-md-3">Description</th>
+          </tr>
         </thead>
         <tbody *ngFor="let data of listpromotions">
-            <tr>    
-              <td >{{data.createdAt}}</td>    
-                <td >{{data.updatedAt}}</td>  
-                <td > {{data.paymentid}}</td> 
-                <td  *ngIf="this.listpromotions[0].status===1"> Active </td>
-                <td  *ngIf="this.listpromotions[0].status===0"> Expired </td>
-                <td >{{data.cost}}</td>
-                <td  >{{data.validity}}</td>
-                <td >{{data.promotiontypedetails[0].promotiontype }}</td>
-                <td >{{data.promotiontypedetails[0].description }}</td>
-            </tr>
-            
+          <tr>
+            <td>{{ data.createdAt }}</td>
+            <td>{{ data.updatedAt }}</td>
+            <td>{{ data.paymentid }}</td>
+            <td *ngIf="this.listpromotions[0].status === 1">Active</td>
+            <td *ngIf="this.listpromotions[0].status === 0">Expired</td>
+            <td>{{ data.cost }}</td>
+            <td style="text-align: center">{{ data.validity }}</td>
+            <td>{{ data.promotiontypedetails[0].promotiontype }}</td>
+            <td>{{ data.promotiontypedetails[0].description }}</td>
+          </tr>
         </tbody>
         <!-- <div  class="offset-6" style="font-style:italic;" *ngIf="!!term">   No Record Found </div> -->
-    </table>
+      </table>
+    </div>
   </div>
-  </div>
-  </section>
-  
-
+</section>

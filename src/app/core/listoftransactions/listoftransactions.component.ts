@@ -17,10 +17,17 @@ export class ListoftransactionsComponent implements OnInit {
   term:any;
   Search: any;
   searchTerm: any;
-  constructor(private authserv:AuthService, private api:ApiService) { }
-
+any: any;
+  constructor(private authserv:AuthService, private api:ApiService) { 
+    setInterval(()=>{
+      this.getListOfTransactions()
+    },1000)
+   
+  }
+  searchText:any
   ngOnInit(): void {
-    this.getListOfTransactions()
+    
+   
   }
   getListOfTransactions(){
     const currentUser = this.authserv.getUser();

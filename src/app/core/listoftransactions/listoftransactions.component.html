@@ -4,7 +4,8 @@
       
       <div class="search" >
         <i class="fa fa-search"></i>
-        <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="term">
+       
+        <input class="form-control" type="text" name="search"  placeholder="Search..."  [(ngModel)]="searchText"  autocomplete="off" >
         <button class="btn btn-primary">Search</button>
       </div>
       
@@ -23,17 +24,16 @@
                 <th class="col-md-3">VPA</th>
             </tr>
         </thead>
-        <tbody *ngFor="let data of ListofTransactions |filter:term  ">
+        <tbody *ngFor="let data of ListofTransactions | filter:searchText ">
             <tr>
-                <td>{{data.date }}</td>
-                <!-- <td class="highlight">{{data.userid}}</td> -->
-                <!-- <td>{{data.type}}</td> -->
+              <td>  {{data.date }}</td>
                 <td>{{data.status }}</td>
                 <td>{{data.points}}</td>
                 <td>{{data.mupi }}</td>
                 <td>{{data.message}}</td>
                 <td>{{data.vpa}}</td>
             </tr>
+          
             
         </tbody>
         <!-- <div  class="offset-6" style="font-style:italic;" *ngIf="!!term">   No Record Found </div> -->

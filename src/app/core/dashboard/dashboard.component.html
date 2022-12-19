@@ -1,69 +1,102 @@
-
-
 <div class="container">
-    <div class="main_content" style="margin-left: 0rem;">
-        
-        <!-- <div class="header  ">Welcome back!! Have a nice day.  
+  <div class="main_content" style="margin-left: 0rem">
+    <!-- <div class="header  ">Welcome back!! Have a nice day.  
         </div>  -->
-        <!-- <h2 class="head">   Dashboard</h2> -->
-        <div class="info">
-            
-          
-          <!-- <div><router-outlet></router-outlet></div> -->
+    <!-- <h2 class="head">   Dashboard</h2> -->
+    <div class="info">
+      <!-- <div><router-outlet></router-outlet></div> -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-412 col-xl-3">
+      <div
+        class="card bg-c-blue order-card"
+        style="border-top: 5px solid #4152a5"
+      >
+        <div class="card-block">
+          <h6
+            class="m-b-20"
+            style="padding: 10px 12px; color: #4152a5; cursor: pointer"
+            routerLink="/merchant/listoftransactions"
+          >
+            List of Transactions
+          </h6>
+          <h2 class="text-left">
+            <i class="bi bi-bank" style="margin-right: 1px"></i
+            ><span style="padding-right: 0.5em">{{ response }}</span>
+          </h2>
+          <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
+        </div>
       </div>
     </div>
-    <div class="row">
-        <div class="col-md-412 col-xl-3">
-            <div class="card bg-c-blue order-card" style="    border-top: 5px solid #4152a5">
-                <div class="card-block">
-                    <h6 class="m-b-20" style="    padding: 10px 12px;
-                    color: #4152a5; cursor: pointer;" routerLink="/merchant/listoftransactions" >List of Transactions</h6> 
-                    <h2 class="text-left"><i class="bi bi-bank" style="margin-right: 1px;"></i><span style="padding-right: 0.5em;">{{response}}</span></h2>
-                    <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-4 col-xl-3">
-            <div class="card bg-c-green order-card" style="    border-top: 5px solid #4152a5">
-                <div class="card-block">
-                  <h6 class="m-b-20" style="    padding: 10px 12px;
-                  color: #4152a5;">Total Amount recived</h6>
-                    <h2 class="text-left"><i class="bi bi-currency-rupee"></i><span style="padding-right: 0.5em;">{{totalAmount}}</span></h2>
-                    <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-4 col-xl-3">
-            <div class="card bg-c-yellow order-card" style="    border-top: 5px solid #4152a5">
-                <div class="card-block">
-                    <h6 class="m-b-20" style="    padding: 10px 12px;
-                    color: #4152a5;">Total Wallet Points</h6>
-                    <h2 class="text-left"><i  style="margin-right: 10px;" class="bi bi-wallet2"></i><span style="padding-right: 0.5em;">{{totalwalletpoint}}</span></h2>
-                    <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-4 col-xl-3">
-            <div class="card bg-c-#4152a5 order-card" style="    box-shadow: 1px 8px 9px #888888;
-            color: black;height: 148px;  border-top: 5px solid #4152a5">
-                <div class="card-block">
-                    <h6 class="m-b-20" style="    padding: 10px 12px;
-                    color: #4152a5;">Collected Wallet points</h6>
-                    <h2 class="text-left"><i style="margin-right: 10px;" class="bi bi-graph-up-arrow"></i><span style="padding-right: 0.5em;">{{collectedwalletpoint}}</span></h2>
-                    <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
-                </div>
-            </div>
-        </div>
 
-        <div class="col-md-4 col-xl-3">
-            <!-- <button type="button"(click)="popup = true">
+    <div class="col-md-4 col-xl-3">
+      <div
+        class="card bg-c-green order-card"
+        style="border-top: 5px solid #4152a5"
+      >
+        <div class="card-block">
+          <h6 class="m-b-20" style="padding: 10px 12px; color: #4152a5">
+            Total Amount recived
+          </h6>
+          <h2 class="text-left">
+            <i class="bi bi-currency-rupee"></i
+            ><span style="padding-right: 0.5em">{{ totalAmount }}</span>
+          </h2>
+          <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xl-3">
+      <div
+        class="card bg-c-yellow order-card"
+        style="border-top: 5px solid #4152a5"
+      >
+        <div class="card-block">
+          <h6 class="m-b-20" style="padding: 10px 12px; color: #4152a5">
+            Total Wallet Points
+          </h6>
+          <h2 class="text-left">
+            <i style="margin-right: 10px" class="bi bi-wallet2"></i
+            ><span style="padding-right: 0.5em">{{ totalwalletpoint }}</span>
+          </h2>
+          <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xl-3">
+      <div
+        class="card bg-c-#4152a5 order-card"
+        style="
+          box-shadow: 1px 8px 9px #888888;
+          color: black;
+          height: 148px;
+          border-top: 5px solid #4152a5;
+        "
+      >
+        <div class="card-block">
+          <h6 class="m-b-20" style="padding: 10px 12px; color: #4152a5">
+            Collected Wallet points
+          </h6>
+          <h2 class="text-left">
+            <i style="margin-right: 10px" class="bi bi-graph-up-arrow"></i
+            ><span style="padding-right: 0.5em">{{
+              collectedwalletpoint
+            }}</span>
+          </h2>
+          <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xl-3">
+      <!-- <button type="button"(click)="popup = true">
                 SELECT
                 <img src="../../../assets/image/qr.png" alt=""></button> -->
-                
-                <!-- <div type="button"(click)="popup = true" class="card bg-c-pink order-card" >
+
+      <!-- <div type="button"(click)="popup = true" class="card bg-c-pink order-card" >
                     <div class="card-block">
                         <h6 class="m-b-20">Merchant QR code</h6>
                         
@@ -74,43 +107,87 @@
                             
                     </div>
                 </div> -->
-                <div class="card bg-c-#4152a5 order-card" style="    box-shadow: 1px 8px 9px #888888;
-            color: black;height: 148px;  border-top: 5px solid #4152a5">
-                <div class="card-block">
-                    <h6 class="m-b-20" style="    padding: 3px 12px;
-                    color: #4152a5;">Merchant QR code</h6>
-                    <img type="button"(click)="popup = true" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal--specialPromo"   class="offset-3" width="60px" height="60px" [src]="localstorageQrcode" alt="qr_code"> 
-                    <a  class="mybtn offset-3" (click)="downloadImg(localstorageQrcode,'QR_code')" >Download</a>
-                </div>
+      <div
+        class="card bg-c-#4152a5 order-card"
+        style="
+          box-shadow: 1px 8px 9px #888888;
+          color: black;
+          height: 148px;
+          border-top: 5px solid #4152a5;
+        "
+      >
+        <div class="card-block">
+          <h6 class="m-b-20" style="padding: 3px 12px; color: #4152a5">
+            Merchant QR code
+          </h6>
+          <img
+            type="button"
+            (click)="popup = true"
+            type="button"
+            class="btn btn-primary btn-lg"
+            data-toggle="modal"
+            data-target="#myModal--specialPromo"
+            class="offset-3"
+            width="60px"
+            height="60px"
+            [src]="localstorageQrcode"
+            alt="qr_code"
+          />
+          <a
+            class="mybtn offset-3"
+            (click)="downloadImg(localstorageQrcode, 'QR_code')"
+            >Download</a
+          >
+        </div>
+      </div>
+    </div>
+    <h5></h5>
+    <!-- Modal -->
+    <div
+      class="overlay d-flex mt-5"
+      *ngIf="popup"
+      id="myModal--specialPromo"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+    >
+      <div class="modal-dialog" role="document" class="popup">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">My QR Code</h4>
+          </div>
+          <div
+            class="modal-body"
+            class="display: flex; justify-content: center;"
+            style="margin-left: -30px"
+          >
+            <img class="qr-img" [src]="localstorageQrcode" alt="qr code" />
+            <div class="d-flex">
+              <div>
+                <button type="button" class="btn-1 btn-success">
+                  <i class="bi bi-share"></i><small>Share</small>
+                </button>
+              </div>
+              <div>
+                <button
+                  type="button"
+                  (click)="downloadImg(localstorageQrcode, 'QR_code')"
+                  class="btn-2 btn-danger"
+                >
+                  <i class="bi bi-cloud-arrow-down"></i>
+                  <small> Download </small>
+                </button>
+              </div>
             </div>
-           
-                </div>
-                <h5> 
-                  
-                </h5>
-        <!-- Modal -->
-        <div  class="overlay d-flex mt-5"  *ngIf="popup" id="myModal--specialPromo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document" class="popup">
-               <div class="modal-content">
-                  <div class="modal-header">
-                     <h4 class="modal-title" id="myModalLabel">My QR Code</h4>
-                  </div>
-                  <div class="modal-body" class=" display: flex;
-                  justify-content: center;" style="    margin-left: -30px;">
-                     <img class="qr-img" [src]="localstorageQrcode" alt="qr code" />
-                     <div class="d-flex"> 
-                    <div>  <button type="button" class="btn-1 btn-success"><i class="bi bi-share"></i><small>Share</small> </button>  </div>
-                  <div>    <button type="button" (click)="downloadImg(localstorageQrcode,'QR_code')" class="btn-2 btn-danger"><i class="bi bi-cloud-arrow-down"></i> <small>  Download </small></button> </div>
-                    </div>
-                    <div class="m-4"> 
-                        <div class="offset-2" style="white-space: nowrap;"> 
-                        <b>UPI ID: {{localstroageUpiid}} </b> 
-                    </div>
-                    </div> 
-                  </div>
-                  <!-- <hr> -->
-                
-                  <!-- <div class="container">
+            <div class="m-4">
+              <div class="offset-2" style="white-space: nowrap">
+                <b>UPI ID: {{ localstroageUpiid }} </b>
+              </div>
+            </div>
+          </div>
+          <!-- <hr> -->
+
+          <!-- <div class="container">
                     <div class="row">
                         <div class="col-md-4">
                             <h3 style="font-weight:500px ; margin-top: -60px;text-transform: capitalize;">upi id</h3>
@@ -131,52 +208,57 @@
                         </div>
                     </div>
                   </div> -->
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal" class="close" (click)="popup = false">&times;</button>
-                    <!-- <a ></a> -->
-                  </div>
-               </div>
-            </div>
-         </div> 
-        <!-- </div> -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-default"
+              data-dismiss="modal"
+              class="close"
+              (click)="popup = false"
+            >
+              &times;
+            </button>
+            <!-- <a ></a> -->
+          </div>
+        </div>
+      </div>
     </div>
-
+    <!-- </div> -->
+  </div>
 </div>
 
 <!-- Transactions -->
-<div class="container wrapper " style="    margin-top: 5rem !important;">
-    <div class="col-md-12 mb-4 " >
-      <h2 class="head">Recent Transactions</h2>
-    </div>
-    <div class="table-responsive">
-    <table class="table table-bordered table-hover w-100" cellspacing="0" width="100%">
-        <thead>
-            <tr>
-                <th class="col-md-2">Date</th>
-                <th class="col-md-1">STATUS</th>
-                <th class="col-md-1">POINTS</th>
-                <th class="col-md-3">MARCHENT UPI</th>
-                <th class="col-md-2">MESSAGE</th>
-                <th class="col-md-3">VPA</th>
-            </tr>
-        </thead>
-        <tbody *ngFor="let data of ListofTransactions |filter:term  ">
-            <tr>
-                <td>{{data.date }}</td>
-                <td>{{data.status }}</td>
-                <td>{{data.points}}</td>
-                <td>{{data.mupi }}</td>
-                <td>{{data.message}}</td>
-                <td>{{data.vpa}}</td>
-            </tr>
-            
-        </tbody>
-        <!-- <div  class="offset-6" style="font-style:italic;" *ngIf="!!term">   No Record Found </div> -->
+<div class="container wrapper" style="margin-top: 5rem !important">
+  <div class="col-md-12 mb-4">
+    <h2 class="head">Recent Transactions</h2>
+  </div>
+  <div class="table-responsive">
+    <table
+      class="table table-bordered table-hover w-100"
+      cellspacing="0"
+      width="100%"
+    >
+      <thead>
+        <tr>
+          <th class="col-md-2">Date</th>
+          <th class="col-md-1">STATUS</th>
+          <th class="col-md-1">POINTS</th>
+          <th class="col-md-3">MARCHENT UPI</th>
+          <th class="col-md-2">MESSAGE</th>
+          <th class="col-md-3">VPA</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let data of recentTransactions | filter : term">
+        <tr>
+          <td>{{ data.date }}</td>
+          <td>{{ data.status }}</td>
+          <td>{{ data.points }}</td>
+          <td>{{ data.mupi }}</td>
+          <td>{{ data.message }}</td>
+          <td>{{ data.vpa }}</td>
+        </tr>
+      </tbody>
+      <!-- <div  class="offset-6" style="font-style:italic;" *ngIf="!!term">   No Record Found </div> -->
     </table>
   </div>
-  </div>
-    
-	
-
-
-  
+</div>

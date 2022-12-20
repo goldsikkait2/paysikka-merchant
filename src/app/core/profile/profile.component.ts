@@ -154,8 +154,13 @@ uploadFile(event:any)  {
 //   formData.append('merchantimage',this.file);
 //   console.log("else" , formData.append('merchantimage',this.file));
 //  }
- 
-     formData.append ('merchantimage', this.file) 
+       if(this.file==undefined){
+        formData.append ('merchantimage', this.merchantImage) 
+    
+    }
+    else{
+      formData.append ('merchantimage', this.file) 
+    }
      formData.append('businessname', this.editForm.get('business_Name')?.value);
      formData.append('merchantname', this.editForm.get('owner_name')?.value);
      formData.append('merchantemail', this.editForm.get('email')?.value);

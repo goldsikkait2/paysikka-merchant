@@ -42,7 +42,7 @@ let ids =paramGlobal.id
     const currentUser = this.authserv.getUser();
     let headers= new HttpHeaders().set('Authorization',currentUser.token)
     this.api.get(`outlet/transactions/${this.paramGlobal.id}`,{headers}).subscribe((r: any) => {
-     this.response = r
+     this.response = r.reverse();
       console.log("responsechild" ,this.response ,);
       
     });

@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
   
-  apiUrl: "http://localhost:3000/api/",
-  //  apiUrl: "http://stg-merchantapi.paysikka.com:8000/api/",
+  // apiUrl: "http://localhost:3000/api/",
+   apiUrl: "http://stg-merchantapi.paysikka.com:8000/api/",
   app: {
     name: 'PaySikka',
 },

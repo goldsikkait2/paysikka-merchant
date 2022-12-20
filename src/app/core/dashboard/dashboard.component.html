@@ -180,13 +180,12 @@
               </div>
             </div>
             <div class="m-4">
-              <div class="offset-2" style="white-space: nowrap">
+              <div class="offset-2" style="white-space: nowrap;     text-align: center;">
                 <b>UPI ID: {{ localstroageUpiid }} </b>
               </div>
             </div>
           </div>
           <!-- <hr> -->
-
           <!-- <div class="container">
                     <div class="row">
                         <div class="col-md-4">
@@ -241,21 +240,25 @@
       <thead>
         <tr>
           <th class="col-md-2">Date</th>
-          <th class="col-md-1">STATUS</th>
+         
           <th class="col-md-1">POINTS</th>
           <th class="col-md-3">MARCHENT UPI</th>
+          <th class="col-md-3">AMOUNT</th>
           <th class="col-md-2">MESSAGE</th>
           <th class="col-md-3">VPA</th>
+          <th class="col-md-1">STATUS</th>
         </tr>
       </thead>
       <tbody *ngFor="let data of recentTransactions | filter : term">
         <tr>
           <td>{{ data.date }}</td>
-          <td>{{ data.status }}</td>
+          
           <td>{{ data.points }}</td>
           <td>{{ data.mupi }}</td>
+          <td> {{data.amount}}</td>
           <td>{{ data.message }}</td>
           <td>{{ data.vpa }}</td>
+          <td>{{ data.status }}</td>
         </tr>
       </tbody>
       <!-- <div  class="offset-6" style="font-style:italic;" *ngIf="!!term">   No Record Found </div> -->

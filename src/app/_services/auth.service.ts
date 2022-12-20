@@ -41,7 +41,7 @@ private route:Router,private confirmBoxEvokeService: ConfirmBoxEvokeService
 
           if (user && user.token) {
             //  this.updateAuthUser(user);
-            console.log("user",user)
+            console.log("user123",user)
           }
           return user;
       }));

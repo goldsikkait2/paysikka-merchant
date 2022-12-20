@@ -50,7 +50,7 @@ file:any
 
     let headers= new HttpHeaders().set('Authorization',currentUser.token)
     this.api.get(`/promotions/package/${this.paramGlobal}`,{headers}).subscribe((r: any) => {
-      this.ListofPromotions = r;
+      this.ListofPromotions = r.reverse();
       
      
       

@@ -108,7 +108,8 @@ export class DashboardComponent implements OnInit {
     let headers = new HttpHeaders().set('Authorization', currentUser.token);
     this.api.get(`dashboard/transactions`, { headers }).subscribe((r: any) => {
       this.ListofTransactions = r;
-      this.recentTransactions = this.ListofTransactions.slice(0, 10);
+      const list = this.ListofTransactions.reverse();
+      this.recentTransactions = list.slice(0, 10)
       console.log(r);
 
       console.log('ListofTranscactions', this.ListofTransactions);

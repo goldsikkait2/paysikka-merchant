@@ -37,7 +37,7 @@ export class FirstpagepromotionComponent implements OnInit {
     let headers = new HttpHeaders().set('Authorization', currentUser.token);
     this.api.get(`promotions/purchaselist`, { headers }).subscribe((r: any) => {
       console.log('rencent pruchased inside two ', r);
-      this.listpromotions = r;
+      this.listpromotions = r.reverse();
 
       this.listpromotions[0].status === 1;
       if (this.listpromotions[0].status === 1) {

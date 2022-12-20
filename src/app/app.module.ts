@@ -43,6 +43,7 @@ import { OutlettransactionComponent } from './core/outlettransaction/outlettrans
 import { ViewpromotionsComponent } from './core/viewpromotions/viewpromotions.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FirstpagepromotionComponent } from './core/firstpagepromotion/firstpagepromotion.component';
+import { NgxPaginationModule } from 'ngx-pagination'
 
 
 
@@ -70,6 +71,7 @@ import { FirstpagepromotionComponent } from './core/firstpagepromotion/firstpage
     OutlettransactionComponent,
     ViewpromotionsComponent,
     FirstpagepromotionComponent,
+    
    
   ],
   imports: [
@@ -110,6 +112,7 @@ import { FirstpagepromotionComponent } from './core/firstpagepromotion/firstpage
         customOne: '#3ebb1a', // optional
         customTwo: '#bd47fa', // optional (up to custom five)
       },
+      
     }),
   
     DialogConfigModule, 
@@ -117,8 +120,8 @@ import { FirstpagepromotionComponent } from './core/firstpagepromotion/firstpage
     ConfirmBoxConfigModule.forRoot(),
     ToastNotificationConfigModule.forRoot(),
     Ng2SearchPipeModule,
-
-
+    NgxPaginationModule
+    
    
   ],
   providers: [ NgxConfirmBoxService,

@@ -13,11 +13,13 @@ import {BrowserModule, DomSanitizer} from '@angular/platform-browser';
 })
 
 export class ListoftransactionsComponent implements OnInit {
-  ListofTransactions: any;
+  ListofTransactions!: object;
   term:any;
   Search: any;
   searchTerm: any;
-any: any;
+  collection = [];
+ 
+  page : number = 1;
   constructor(private authserv:AuthService, private api:ApiService) { 
     setInterval(()=>{
       this.getListOfTransactions()
@@ -28,19 +30,26 @@ any: any;
   ngOnInit(): void {
     
    
+   
   }
+  
   getListOfTransactions(){
     const currentUser = this.authserv.getUser();
 
     let headers= new HttpHeaders().set('Authorization',currentUser.token)
-    this.api.get(`dashboard/transactions`,{headers}).subscribe((r: any) => {
-      this.ListofTransactions = r;
+    this.api.get(`dashboard/transactions??page=${this.page}`,{headers}).subscribe((r: any) => {
+      this.ListofTransactions = r.reverse();
       console.log(r);
       
       console.log("ListofTranscactions" , this.ListofTransactions);
       
     });
   }
-  
+
+  pageChanged(pageNumber:any) {
+    this.page = pageNumber;
+    this.getListOfTransactions();
+   
+  }
 
 }

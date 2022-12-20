@@ -112,6 +112,8 @@ console.log('click',this.loginForm.value.contact)
   )
       .subscribe((res: any) => {
         console.log(res)
+        console.log("login response" ,  res);
+        
               this.errors = [];
               this.isSubmitting = false;
               if (res.token) {
@@ -178,6 +180,7 @@ onOtpChange(otp:any) {
     
       this.api.post(`verifyotp`,data)
           .subscribe((res: any) => {
+            console.log("res from otp", res);
             
               this.isSubmitting = false;
               console.log(res)

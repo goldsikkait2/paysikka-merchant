@@ -17,13 +17,13 @@ export class BranchregisterComponent implements OnInit {
   bname= "IT services";
   oname= "Abdul Hamed";
   oemail="hamed@gmail.com";
-  contact=8341554858;
-  wcontact=8341554858;
-  anumber=293617851384;
-  pnumber= "CENPC0484D";
+  contact=9966089125;
+  wcontact=9966089125;
+  anumber=536498157668;
+  pnumber= "AZIPH2234G";
   gstnum="abcdef879";
   pin= 500036;
-  loc= "old Malakpet"
+  loc= "Malakpet"
   state = "telangana"
   constructor( private fb: FormBuilder, private api:ApiService , private toster :ToastrService ,private router: Router) {
     this. registerForm = this.fb.group({
@@ -178,7 +178,8 @@ export class BranchregisterComponent implements OnInit {
         },
         (err:any) => {
           console.log(err)
-          this.toster.error(err.error.Error)
+          this.toster.error(err.error.error)
+          
           
           console.log("errormessage" , err.error.mes );
           

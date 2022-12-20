@@ -15,28 +15,46 @@
         <thead>
             <tr>
                 <th class="col-md-2">Date</th>
-                <!-- <th >USER_ID</th> -->
-                <!-- <th >TYPE</th> -->
-                <th class="col-md-1">STATUS</th>
+               
                 <th class="col-md-1">POINTS</th>
                 <th class="col-md-3">MARCHENT UPI</th>
+                <th class="col-md-3">AMOUNT</th>
                 <th class="col-md-2">MESSAGE</th>
                 <th class="col-md-3">VPA</th>
+                <th class="col-md-1">STATUS</th>
             </tr>
         </thead>
-        <tbody *ngFor="let data of ListofTransactions | filter:searchText ">
+        <tbody *ngFor="let data of ListofTransactions | filter:searchText |     paginate : { itemsPerPage: 10, currentPage: page} ">
+       
             <tr>
               <td>  {{data.date }}</td>
-                <td>{{data.status }}</td>
+               
                 <td>{{data.points}}</td>
                 <td>{{data.mupi }}</td>
+                <td> {{data.amount}}</td>
                 <td>{{data.message}}</td>
                 <td>{{data.vpa}}</td>
+                <td>{{data.status }}</td>
             </tr>
-          
+           
             
         </tbody>
-        <!-- <div  class="offset-6" style="font-style:italic;" *ngIf="!!term">   No Record Found </div> -->
-    </table>
+      
+      </table>
+      <div class="pagination" >
+        <pagination-controls
+          (pageChange)="pageChanged($event)"
+          (pageBoundsCorrection)="pageChanged($event)"
+          maxSize:any="5"
+          directionLinks:boolean="true"
+          responsive:boolean="true"
+          previousLabel="Prev"
+          nextLabel="Next"
+          screenReaderPaginationLabel="Pagination"
+          screenReaderPageLabel="page"
+          screenReaderCurrentLabel="You're on page">
+        </pagination-controls>
+      </div>
+      
   </div>
   </div>

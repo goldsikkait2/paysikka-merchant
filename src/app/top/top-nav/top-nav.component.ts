@@ -37,7 +37,13 @@ export class TopNavComponent implements OnInit {
    }
    
   ngOnInit(): void {
-    
+    this.activeRoute.params.subscribe((params)=>{
+      this.paramGlobal = params['id']
+      console.log("dsfgfdgfg2", this.paramGlobal);
+   
+      
+      
+    })
 
   }
 
@@ -60,7 +66,10 @@ export class TopNavComponent implements OnInit {
     else if(this.router.url === '/merchant/promotions'){
       this.title = 'Promotions category' 
     }
-    else if(this.router.url === '/merchant/all-promotions:id'){
+    else if(this.router.url === `/merchant/all-promotions/ + this.paramGlobal` ){
+      console.log("satish" , this.router.url);
+      
+      
       this.title = 'All Promotions'
       
       
